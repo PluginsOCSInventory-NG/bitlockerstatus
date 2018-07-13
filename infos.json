@@ -1,0 +1,10 @@
+{
+  "displayName" : "Bitlocker status",
+  "author" : ["Stephane PAUTREL"],
+  "contributor" : [],
+  "supportedAgent" : ["Windows"],
+  "description" : {
+    "fr" : "Remonte le statut de Bitlocker",
+    "en" : "Retrieve Bitlocker status"
+  }
+}
