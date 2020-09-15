@@ -3,7 +3,7 @@
 ' Script :	Retrieve bitlocker status
 ' Version :	1.1
 ' Date :	14/09/2020
-' Author :	Guironnet Nicolas
+' Author :	Stéphane PAUTREL (acb78.com)/ GUIRONNET Nicolas
 '----------------------------------------------------------
 On Error Resume Next
 
