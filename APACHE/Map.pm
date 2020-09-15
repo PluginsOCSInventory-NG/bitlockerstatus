@@ -28,7 +28,9 @@ $DATA_MAP{bitlockerstatus} = {
 			CONVERSIONSTATUS => {},
 			PROTECTIONSTATUS => {},
 			ENCRYPMETHOD => {},
-			INITPROTECT => {}
+			INITPROTECT => {},
+			RECOVERYPASSWORD => {},
+			PROTECTORS => {}
 }
 };
 1;
