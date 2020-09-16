@@ -1,8 +1,8 @@
 '----------------------------------------------------------
 ' Plugin for OCS Inventory NG 2.x
 ' Script :	Retrieve bitlocker status
-' Version :	1.1
-' Date :	14/09/2020
+' Version :	1.2
+' Date :	16/09/2020
 ' Author :	Stéphane PAUTREL (acb78.com)/ GUIRONNET Nicolas
 '----------------------------------------------------------
 On Error Resume Next
@@ -34,18 +34,23 @@ For Each BitLockerItem in BitLockerItems
 	Result = Result & "<INITPROTECT>" & BitLockerItem.IsVolumeInitializedForProtection & "</INITPROTECT>" & VbCrLf
 	BitLockerItem.GetKeyProtectors 0,VolumeKeyProtectorID
 	Protectors=""
+	PasswordId=""
+	Password=""
 	For Each objId in VolumeKeyProtectorID
 		BitLockerItem.GetKeyProtectorFriendlyName objId, VolumeKeyProtectorFriendlyName
 		Protectors=VolumeKeyProtectorFriendlyName & "," & Protectors
 		BitLockerItem.GetKeyProtectorType  objId, ProtectorType
 		If ProtectorType=3 Then 
-			BitLockerItem.GetKeyProtectorNumericalPassword  objId,Password
-		Else	
-			Password="none"
+			PasswordId=objId & "," & PasswordId
+			BitLockerItem.GetKeyProtectorNumericalPassword  objId,pwd
+			Password=pwd & "," & Password
 		End If
 	Next
 	Protectors=Left(Protectors,Len(Protectors)-1)
+	PasswordId=Left(PasswordId,Len(PasswordId)-1)
+	Password=Left(Password,Len(Password)-1)
 	Result = Result & "<PROTECTORS>" & Protectors & "</PROTECTORS>" & VbCrLf
+	Result = Result & "<PASSWORDID>" & PasswordId & "</PASSWORDID>" & VbCrLf
 	Result = Result & "<RECOVERYPASSWORD>" & Password & "</RECOVERYPASSWORD>" & VbCrLf
 	Result = Result & "</BITLOCKERSTATUS>" & VbCrLf
 	WScript.Echo Result

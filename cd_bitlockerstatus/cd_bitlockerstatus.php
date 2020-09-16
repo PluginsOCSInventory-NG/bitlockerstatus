@@ -37,7 +37,8 @@ else{
 		'Encryption method' => 'ENCRYPMETHOD',
 		'Volume initialization for protection' => 'INITPROTECT',
 		'Recovery Password' => 'RECOVERYPASSWORD',
-		'Protectors' => 'PROTECTORS'
+		'Protectors' => 'PROTECTORS',
+		'Password ID' => 'PASSWORDID'
 	);
 	$list_col_cant_del=$list_fields;
 	$default_fields= $list_fields;

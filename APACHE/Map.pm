@@ -30,7 +30,8 @@ $DATA_MAP{bitlockerstatus} = {
 			ENCRYPMETHOD => {},
 			INITPROTECT => {},
 			RECOVERYPASSWORD => {},
-			PROTECTORS => {}
+			PROTECTORS => {},
+			PASSWORDID => {}
 }
 };
 1;
