@@ -35,7 +35,10 @@ else{
 		'Conversion status' => 'CONVERSIONSTATUS',
 		'Protection status' => 'PROTECTIONSTATUS',
 		'Encryption method' => 'ENCRYPMETHOD',
-		'Volume initialization for protection' => 'INITPROTECT'
+		'Volume initialization for protection' => 'INITPROTECT',
+		'Recovery Password' => 'RECOVERYPASSWORD',
+		'Protectors' => 'PROTECTORS',
+		'Password ID' => 'PASSWORDID'
 	);
 	$list_col_cant_del=$list_fields;
 	$default_fields= $list_fields;

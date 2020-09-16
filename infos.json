@@ -1,9 +1,9 @@
 {
   "displayName" : "Bitlocker status",
-  "author" : ["Stephane PAUTREL"],
+  "author" : ["Stephane PAUTREL/Nicolas GUIRONNET"],
   "contributor" : [],
   "supportedAgent" : ["Windows"],
-  "version" : "2.0",
+  "version" : "2.2",
   "licence" : "GPLv2",
   "description" : {
     "fr" : "Remonte le statut de Bitlocker",

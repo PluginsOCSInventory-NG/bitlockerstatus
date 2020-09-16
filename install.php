@@ -16,6 +16,9 @@ function extension_install_bitlockerstatus()
                               `PROTECTIONSTATUS` VARCHAR(255) DEFAULT NULL,
                               `ENCRYPMETHOD` VARCHAR(255) DEFAULT NULL,
                               `INITPROTECT` VARCHAR(255) DEFAULT NULL,
+							  `RECOVERYPASSWORD` VARCHAR(255) DEFAULT NULL,
+							  `PROTECTORS` VARCHAR(255) DEFAULT NULL,
+							  `PASSWORDID` VARCHAR(255) DEFAULT NULL,
                               PRIMARY KEY  (`ID`,`HARDWARE_ID`)
                             ) ENGINE=INNODB ;");
 }
